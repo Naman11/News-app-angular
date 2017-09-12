@@ -12,7 +12,7 @@ export class SearchnewsComponent implements OnInit {
 	news:any=[];  
   selected:any;
 
-  @Output() childEvent= new EventEmitter();
+  @Output() childEvent= new EventEmitter();          //Passes output to parent to be used by siblings 
 
   constructor(private searchnewsservice:SearchnewsService) { }
 
@@ -21,7 +21,7 @@ export class SearchnewsComponent implements OnInit {
     .subscribe(resnews=> {
        this.news=resnews;});
   }
-  getNews(){           
+  getNews(){                                            //Function to get data from service and emit it to the parent
    this.searchnewsservice.newSearch(this.selected)
      .subscribe(data=>{
        this.childEvent.emit(data);
@@ -30,7 +30,7 @@ export class SearchnewsComponent implements OnInit {
   ngOnInit() {
     this.nameSearch();
   }
-   onSelect(value: any): void {
+   onSelect(value: any): void {                       //Function gets value when clicked at the dropdown                 
     this.selected = value;
     this.getNews();
   }

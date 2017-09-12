@@ -8,17 +8,17 @@ import { FavouriteListService } from './favourite-list.service'
   providers: [FavouriteListService]
 })
 export class FavouriteListComponent {
-	@Input() dispdata:any;
+	@Input() dispdata:any;      //Receives input from parent
 
 	updatedata:any;
 	deletedata:any;
   
   constructor(private favouriteListService:FavouriteListService ) { }
 
-  updatefav(data){
+  updatefav(data){                                    //receives data when clicked on the update button
   	this.updatedata=data;
   }
-  deletefav(data){
+  deletefav(data){                                    //deleted data when clicked on delete button
     this.favouriteListService.deletefav(data)
     .subscribe((res)=>{
       this.deletedata=res;

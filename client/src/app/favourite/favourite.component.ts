@@ -12,7 +12,7 @@ export class FavouriteComponent implements OnInit {
 	data:any;
   constructor(private favouriteService:FavouriteService) { }
 
-  getData(){
+  getData(){                  //gets favourite data added into the database
   	this.favouriteService.getData().subscribe((refer)=>{
   		this.data=refer;
   	});  	

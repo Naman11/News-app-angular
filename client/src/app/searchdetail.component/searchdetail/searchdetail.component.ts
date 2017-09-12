@@ -9,11 +9,11 @@ import { SearchdetailService } from './../../searchdetail.service/searchdetail.s
 })
 export class SearchdetailComponent implements OnInit {
    refer: any;
-	@Input() data : any;
+	@Input() data : any;                                        // Takes imput from it's parent
 	  constructor(private searchdetailservice :SearchdetailService) { }
 
    ngOnInit() { }
-  getNewsData( newsdata : any){
+  getNewsData( newsdata : any){                            //To get the response from service when connected to database
   	this.searchdetailservice.saveData(newsdata).subscribe(refer=> {this.refer=refer;});
   }
 }

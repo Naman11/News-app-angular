@@ -11,7 +11,7 @@ let updateval =require('../routes/update');
 let deleteval =require('../routes/delete');
 let schema = require('../model/newsschema');
 
-let url=supertest('http://localhost:3000');
+let url=supertest('http://localhost:3003');
 
 let getstub=sinon.stub(schema,'find');
 let poststub=sinon.stub(schema,'insertMany');
@@ -28,7 +28,7 @@ describe('Method request to be processed here',()=>{
 	});
 	it('Get must be a success',(done)=>{
 		url
-			.get('/')
+			.get('/getval')
 			.expect('Content-Type', /json/)
 			.expect(200)
 			.end((err,res)=>{
@@ -55,7 +55,7 @@ describe('Method request to be processed here',()=>{
 	});
 		it('Put must be a success',(done)=>{
 		url
-			.put('/12')
+			.put('/updateval/12')
 			.expect('Content-Type', /json/)
 			.expect(200)
 			.send({title:"changed"})
@@ -67,7 +67,7 @@ describe('Method request to be processed here',()=>{
 	});
 		it('Delete must be a success',(done)=>{
 		url
-			.delete('/14')
+			.delete('/deleteval/14')
 			.expect('Content-Type', /json/)
 			.expect(200)
 			.end((err,res)=>{

@@ -9,8 +9,8 @@ import { SearchnewsService } from './../searchnews.service/searchnews.service';
 })
 export class HeadComponent {
 
-  data:any={};
+  data:any={};												
   title="News";
-  newsdata(data) {this.data=data;}
+  newsdata(data) {this.data=data;}	//Function to take the input from the child
 
 }

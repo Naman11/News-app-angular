@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
+import { NgxPaginationModule } from 'ngx-pagination'
 import { SearchnewsComponent } from './searchnews.component/searchnews/searchnews.component';
 import { SearchlistComponent } from './searchlist.component/searchlist/searchlist.component';
 import { SearchdetailComponent } from './searchdetail.component/searchdetail/searchdetail.component';
@@ -19,7 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { HeadComponent } from './head/head.component';
 
 @NgModule({
-  imports:      [ BrowserModule,FormsModule,HttpModule,NgbModule.forRoot(),AppRoutingModule],
+  imports:      [ BrowserModule,FormsModule,HttpModule,NgbModule.forRoot(),AppRoutingModule,NgxPaginationModule],
   declarations: [ AppComponent, SearchnewsComponent, SearchlistComponent, SearchdetailComponent, HeaderComponent, FavouriteComponent, FavouriteListComponent, UpdatefavComponent, LoginComponent, RegisterComponent, HeadComponent ],
   providers:    [ SearchnewsService,SearchdetailService ],
   bootstrap:    [ AppComponent ]

@@ -17,9 +17,8 @@ info:any={};
 
   constructor(private registerUser:RegisterService,private route:Router) { }
 
-  myRegister()
+  myRegister()                    //Registers the new user
 {
-	console.log(this.data)
 	this.registerUser.register(this.data)
 	.subscribe((data)=>{ this.info=this.data ; })
   this.route.navigateByUrl('login');

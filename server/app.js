@@ -34,8 +34,8 @@ app.use('/update',update);
 app.use('/getval',getval);
 app.use('/users', users);
 app.use('/deleteval',deleteval);
-// app.use('/login',login);
-// app.use('/register',register);
+app.use('/login',login);
+app.use('/register',register);
 
 
 let apiRoutes= express.Router();

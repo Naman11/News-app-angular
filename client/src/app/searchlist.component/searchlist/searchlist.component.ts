@@ -6,7 +6,7 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./searchlist.component.css']
 })
 export class SearchlistComponent {
-	@Input() inputdata : any;
+	@Input() inputdata : any;			//Takes input from it's parent 
   
 
 }
