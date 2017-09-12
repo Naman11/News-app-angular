@@ -1,0 +1,23 @@
+<html>
+  <head>
+  </head>
+  <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3" *ngIf="data">
+        <h5>{{data.title}}</h5></div>
+        <div class="col-md-3"><p class="text-center"> {{data.description}} </p></div>
+        <div class="col-md-3"><a href="{{data.url}}" target="_blank">
+          <img src={{data.urlToImage}} class="img-fluid img-responsive" alt="Image" height=100% width=100%></a>
+        </div>
+        <div class="col-md-3">
+         <p class="text-center">{{data.author}}</p>
+        </div>
+        <hr>
+        <button class="btn-btn-primary" (click)=getNewsData(data)>Add to Favourites</button>
+        <hr>   
+    </div>
+    <hr>
+    </div>
+  </body>
+</html>

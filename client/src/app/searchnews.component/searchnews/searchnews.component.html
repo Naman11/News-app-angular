@@ -1,0 +1,54 @@
+<!--nav bar begins-->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/search" routerLinkActive="active">Search <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/favourites" routerLinkActive="active">Display Favourites</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav><!--nav bar ends-->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+  <li>    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" (click)="nameSearch()" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Channel List
+            </button>
+            <div class="dropdown-menu">
+              <ul>
+                <li *ngFor="let i of news" (click)="onSelect(i.id)"><a class ="nav-link" routerLink='../news-detail' routerLinkActive="active"><button>{{i.name}}</button></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </li>
+    </ul>
+  </div>
+</nav>
+
+    </div>
+  </div>
+</div>
