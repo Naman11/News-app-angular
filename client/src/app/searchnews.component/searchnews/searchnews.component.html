@@ -1,3 +1,4 @@
+<div class="container">
 <!--nav bar begins-->
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,11 +17,12 @@
     
   </div>
 </nav><!--nav bar ends-->
+</div>
 
 <div class="container">
   <div class="row">
-    <div class="col">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <div class="col-md-2 col-xs-1">
+        <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,8 +49,17 @@
   </li>
     </ul>
   </div>
-</nav>
-
+</nav> -->
+<div class="input-group-btn">
+            <button type="button" (click)="nameSearch()" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Channel List
+            </button>
+            <div class="dropdown-menu">
+              <!-- <ul> -->
+                <li *ngFor="let i of news" (click)="onSelect(i.id)"><a class ="nav-link" routerLink='../news-detail' routerLinkActive="active"><button>{{i.name}}</button></a></li>
+              <!-- </ul> -->
+            </div>
+          </div>
     </div>
   </div>
 </div>

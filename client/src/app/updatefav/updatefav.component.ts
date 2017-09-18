@@ -12,6 +12,7 @@ export class UpdatefavComponent {
   resp:any;
   news:string;
   constructor(private updatefavService:UpdatefavService) { }
+  
   updatefav(inputdata:any){
   	this.updatefavService.updatefav(inputdata)
   	.subscribe((res)=>{
